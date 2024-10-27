@@ -4,20 +4,24 @@
 
 int main() {
     int m,n;
+    //first input
     printf("Enter no of digits of first number:");
     scanf("%d",&m);
     printf("Enter first number :");
     char* s1=(char*)malloc(m);
-     scanf("%s",s1);
+    scanf("%s",s1);
+    //second input
     printf("Enter no of digits of second number::");
     scanf("%d",&n);
     printf("Enter second number :");
     char* s2=(char*)malloc(n);
     scanf("%s",s2);
+    //result
     char * result =(char*)calloc((m+n+1),sizeof(char));
     for(int i=0;i<m+n;i++){
         result[i]='0';
     }
+    //calculation
     for (int i = m - 1; i >= 0; i--) {
         int carry = 0;
         for (int j = n - 1; j >= 0; j--) {
@@ -27,6 +31,7 @@ int main() {
         }
         result[i] += carry;
     }
+    //remove zero from the beginning
     for(int i=0;i<m+n+1;i++){
         if(result[i]!='0')break;
         result++;
