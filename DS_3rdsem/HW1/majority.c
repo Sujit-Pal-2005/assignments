@@ -34,10 +34,10 @@ void majority(int arr[],int n){
     }
 
     if(count>n/2){
-        printf("Majority element is %d",el);
+        printf("Majority element is %d .",el);
     }
     else{
-        printf("No majority element");
+        printf("No majority element.");
     }
 }
 
