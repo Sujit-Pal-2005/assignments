@@ -28,8 +28,8 @@ int assign_id(point points[],point cluster_points[],int n ,int k){
       }
     }
     if(temp!=points[i].cluster_id)flag++;
- }
- return flag;
+  }
+  return flag;
 }
 //function for making new cluster
 void new_cluster(point points[],point cluster_points[],int n ,int k){
