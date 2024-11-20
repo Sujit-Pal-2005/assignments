@@ -13,9 +13,9 @@ Enter number of element for dequeue :3
 ```
 **Output**
 ```
+No of element is 8 
 Elements are :92 31 9 69 38 25 68 9 
 Front element is 92 and rear element is 9
-Enter number of element for dequeue :3
 
 No of element is 5
 Elements are :69 38 25 68 9
