@@ -78,15 +78,20 @@ int  count(nd* head){
 int main(){
     srand(time(NULL));
     nd* head=NULL;
-    for(int i=0;i<23;i++){
+    int n;
+    printf("\nEnter number of element for enqueue: ");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
         int data=rand()%100;
         head=enqueue(head,data);
     }
     printf("\nNo of element is %d ",count(head));
     traverse(head);
-    for(int i=0;i<22;i++){
+    printf("\nEnter number of element for dequeue :");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
         head=dequeue(head);
     }
-    traverse(head);
     printf("\nNo of element is %d ",count(head));
+    traverse(head);
 }
