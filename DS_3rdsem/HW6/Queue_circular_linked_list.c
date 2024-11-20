@@ -94,4 +94,5 @@ int main(){
     }
     printf("\nNo of element is %d ",count(head));
     traverse(head);
+    return 0;
 }

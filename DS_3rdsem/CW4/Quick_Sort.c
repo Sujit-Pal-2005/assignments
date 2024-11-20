@@ -42,34 +42,28 @@ int isSorted(int *arr,int n){
 }
 
 int main(){
-    srand(time(NULL));
-    int exit=1;
-    while(exit){
-        printf("Enter length of the array :");
-    int n;
-    scanf("%d",&n);
-    int * arr= (int*)malloc(n*sizeof(int));
-    //printf("Enter all elements :");
-    // for(int i=0;i<n;i++){
-    //     scanf("%d",&arr[i]);
-    // }
-    for(int i=0;i<n;i++){
-        arr[i]=rand()%10000;
+srand(time(NULL));
+    FILE *f=fopen("output.txt","w");
+    for(int j=0;j<50000;j+=100){
+        int n=j;
+        int *arr=(int*)malloc(n*sizeof(int));
+        for(int i=0;i<n;i++){
+            arr[i]=rand()%10000;
+        }
+        int cnt=0;
+        if(isSorted(arr,n)){
+            printf("The array is already sorted\n");
+        }
+        else{
+            quick_sort(arr,0,n-1,&cnt);
+            if(isSorted(arr,n)){
+               // printf("Now this is sorted\n");
+               // printf("No of comparison for %d element is %d\n",n,cnt);
+                fprintf(f,"%d %d\n",n,cnt);
+            }
+        }
+        free(arr);
     }
-    if(isSorted(arr,n)){
-        printf("The array is sorted");
-    }
-    int cmp=0;
-    quick_sort(arr,0,n-1,&cmp);
-    // printf("Sorted array is :");
-    // for(int i=0;i<n;i++){
-    //     printf("%d ",arr[i]);
-    // }
-    if(isSorted(arr,n)){
-       printf("No of comparison is :%d",cmp);
-    }
-    printf("\nfor exit enter 0 \n for counting again  enter 1:");
-    scanf("%d",&exit);
-    }
-
+    fclose(f);
+    return 0;
 }
