@@ -10,9 +10,10 @@ int main(){
     scanf("%d %d",&low,&high);
     
     srand(time(NULL));
+    printf("Random numbers are : ");
     while(n--){
         int x=low+(rand()%(high-low+1));
         printf("%d ",x);
     }
- return 0;
+    return 0;
 }
