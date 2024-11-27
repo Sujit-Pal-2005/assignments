@@ -59,7 +59,6 @@ nswp: 	inx h
 ;subroutine to find maximum
 maximum: push b
 	mov a,m
-	dcr c
 	inx h
 nxtt:   cmp m
 	jnc swapno
