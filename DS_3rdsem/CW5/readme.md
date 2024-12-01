@@ -1,11 +1,16 @@
 # Statement
 Write a program to create a Binary search tree. Youi must have the following functions:
 
-1.Insert(x)
+ 1.Insert(x)
+
 2. Search(x)
+
 3. DisplayBST(): by in order traversal
+   
 4. Delete (x)
+  
 5. Height(x) : find height of the node that has key x
+
 **Input & Output**
 ```
  Enter 1 for insert key
