@@ -52,7 +52,7 @@ nd* creation(){
         printf("Enter %d no element's coefficient and exponent : ",i);
         int coeff,exp;
         scanf("%d %d",&coeff,&exp);
-       if(coeff!=0) head=insert(head,coeff,exp);
+        if(coeff!=0) head=insert(head,coeff,exp);
     }
     return head;
 }
@@ -211,9 +211,9 @@ int main(){
     int exit=1;
     int n=0;
     nd** list=NULL;
+    printf("\nRule:\n 1.Create polynomial \n 2.Add polynomial \n 3.Subtract polynomial \n 4.Multiply polynomial \n 5.Display polynomial \n 6.Exit");
     int choice;
     while(exit){
-        printf("\nRule:\n 1.Create polynomial \n 2.Add polynomial \n 3.Subtract polynomial \n 4.Multiply polynomial \n 5.Display polynomial \n 6.Exit");
         printf("\n Enter choice:");
         scanf("%d",&choice);        
         switch(choice){
