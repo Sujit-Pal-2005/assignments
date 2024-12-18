@@ -211,7 +211,7 @@ int main(){
     int exit=1;
     int n=0;
     nd** list=NULL;
-    printf("\nRule:\n 1.Create polynomial \n 2.Add polynomial \n 3.Subtract polynomial \n 4.Multiply polynomial \n 5.Display polynomial \n 6.Exit");
+    printf("\nRule:\n 1.Create polynomial \n 2.Add polynomial \n 3.Subtract polynomial \n 4.Multiply polynomial \n 5.Display polynomial \n 6.Erase Polynomial \n 7.Exit");
     int choice;
     while(exit){
         printf("\n Enter choice:");
@@ -281,6 +281,13 @@ int main(){
                 }
                 printf("\n");
                 break;
+            }
+            case 6: {
+                int index;
+                printf("\nEnter Polynomial index :");
+                scanf("%d",&index);
+                free_memory(list[index-1]);
+                list[index-1]=NULL;
             }
             default:{
                 for(int i = 0; i < n; i++) {
